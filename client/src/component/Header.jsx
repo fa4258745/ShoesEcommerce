@@ -91,7 +91,7 @@ import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import "../css/header.css";
-import logo from "../images/banner/logo.jpg";
+import Logo from "../images/banner/logo.jpg";
 
 const Header = () => {
 
@@ -111,7 +111,7 @@ const Header = () => {
 
           {/* LOGO */}
           <Navbar.Brand href="#home">
-            <img src={logo} width="60px" />
+            <img src={Logo} width="60px" />
           </Navbar.Brand>
 
           {/* HAMBURGER */}
