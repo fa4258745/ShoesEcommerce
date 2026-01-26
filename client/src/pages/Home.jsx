@@ -297,6 +297,7 @@ const Home = () => {
 
       <Containerdiv />
 
+
       <GallerySwiper />
 
       <Advertisement />
