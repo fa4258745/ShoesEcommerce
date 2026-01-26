@@ -19,7 +19,7 @@ import AdvidUnderArmour2 from "../video/UnderArmourAnimate.mp4";
 import AdvidPuma2 from "../video/From KlickPin CF Rate these _ Shoe advertising Shoes photography Discount sneakers.mp4";
 import "../css/advertisement.css";
 
-const containerdiv = () => {
+const ContainerDiv = () => {
   return (
     <div>
        {/* <>*******   SECTION 2     *******</> */}
@@ -216,4 +216,4 @@ const containerdiv = () => {
   )
 }
 
-export default containerdiv
+export default ContainerDiv
