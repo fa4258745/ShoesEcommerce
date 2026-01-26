@@ -11,7 +11,7 @@ import GallerySwiper from "./GallerySwiper";
 import "../css/homeData.css";
 import heroimg from "../images/banner/hero-section-img.png";
 import Advertisement from "./Advertisement.jsx";
-import Containerdiv from "./containerdiv";
+import Containerdiv from "./Containerdiv.jsx";
 
 import Adidaslogo from "../images/Logo/New folder/adidas.png";
 import Nikelogo from "../images/Logo/New folder/nike.png";
