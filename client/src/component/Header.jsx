@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 // import Container from 'react-bootstrap/Container';
 // import Nav from 'react-bootstrap/Nav';
 // import Navbar from 'react-bootstrap/Navbar';
@@ -6,46 +12,71 @@
 // import { useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
-// import "../css/header.css"
-// const Header=()=>{
+// import "../css/header.css";
+// import logo from "../images/banner/logo.jpg"
+// import { FaHeart } from "react-icons/fa";
+// const Header = () => {
 
-// const cartData= useSelector(state=>state.mycart.cart);
-// const cartLength= cartData.length;
-// const navigate = useNavigate();
+//   const cartData = useSelector(state => state.mycart.cart);
+//   const cartLength = cartData.length;
+//   const navigate = useNavigate();
 
-// const logout=()=>{
-//   localStorage.clear();
-// }
-//   return(
-//         <>
-//       <Navbar bg="primary" data-bs-theme="dark">
+//   const logout = () => {
+//     localStorage.clear();
+//   };
+
+//   return (
+//     <>
+//       <Navbar  data-bs-theme="dark">
 //         <Container>
-//           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+//           <Navbar.Brand href="#home">
+//            <img src={logo} width="60px"/>
+//           </Navbar.Brand>
+
 //           <Nav className="me-auto">
-//             <Nav.Link as={Link} to="home">Home</Nav.Link>
-//             <Nav.Link href="#features">Features</Nav.Link>
-//             <Nav.Link href="#pricing">Pricing</Nav.Link>
+//             <Nav.Link as={Link} to="home">Nike</Nav.Link>
+//             <Nav.Link as={Link} to="home">Reebok</Nav.Link>
+//             <Nav.Link as={Link} to="home">Adidas</Nav.Link>
+//             <Nav.Link as={Link} to="home">Under Armour</Nav.Link>
+//             <Nav.Link as={Link} to="home">Puma</Nav.Link>
 //           </Nav>
 
-//          <span> Welcome {localStorage.getItem("username")} 
-//           <a href="#" onClick={logout}>Logout</a></span>
-//           <span style={{cursor:"pointer"}} onClick={()=>{navigate("/signup")}}> SignIn </span>
+//           <div> 
+//           <input type='text' placeholder='Search' className='searchbar'/>
+//           </div>
 
-//          <span className='itemcount'> {cartLength} </span> 
+//           <span>
+//             <a href="#" onClick={logout}>Logout</a>
+//           </span>
 
-//           <FaShoppingCart className='carticon'
-//           onClick={()=>{navigate("/cartdata")}} style={{cursor:"pointer"}} /> 
+//           <span style={{ cursor: "pointer" }} onClick={() => { navigate("/signup") }}>
+//             SignIn
+//           </span>
+
+
+
+//          <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"20px"}}>
+
+//           <span className="itemcount">{cartLength}</span>
+//           <FaShoppingCart
+//             className="carticon"
+//             onClick={() => { navigate("/cartdata") }}
+//             style={{ cursor: "pointer",color:"black" }}
+//           />
+
+//           <FaHeart className='favouriteicon'/>
+
+//          </div>
+
+
+
 //         </Container>
 //       </Navbar>
-   
-    
-//         </>
-//     )
-// }
+//     </>
+//   );
+// };
 
 // export default Header;
-
-
 
 
 
@@ -56,13 +87,12 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import "../css/header.css";
-import logo from "../images/banner/logo.jpg"
-import { FaHeart } from "react-icons/fa";
+import logo from "../images/banner/logo.jpg";
+
 const Header = () => {
 
   const cartData = useSelector(state => state.mycart.cart);
@@ -75,49 +105,63 @@ const Header = () => {
 
   return (
     <>
-      <Navbar  data-bs-theme="dark">
+      {/* <Navbar expand="lg" data-bs-theme="dark"> */}
+      <Navbar expand="lg" bg='light'>
         <Container>
+
+          {/* LOGO */}
           <Navbar.Brand href="#home">
-           <img src={logo} width="60px"/>
+            <img src={logo} width="60px" />
           </Navbar.Brand>
 
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="home">Nike</Nav.Link>
-            <Nav.Link as={Link} to="home">Reebok</Nav.Link>
-            <Nav.Link as={Link} to="home">Adidas</Nav.Link>
-            <Nav.Link as={Link} to="home">Under Armour</Nav.Link>
-            <Nav.Link as={Link} to="home">Puma</Nav.Link>
-          </Nav>
+          {/* HAMBURGER */}
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-          <div> 
-          <input type='text' placeholder='Search' className='searchbar'/>
-          </div>
+          {/* COLLAPSIBLE CONTENT */}
+          <Navbar.Collapse id="basic-navbar-nav">
 
-          <span>
-            <a href="#" onClick={logout}>Logout</a>
-          </span>
+            {/* NAV LINKS */}
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="home">Nike</Nav.Link>
+              <Nav.Link as={Link} to="home">Reebok</Nav.Link>
+              <Nav.Link as={Link} to="home">Adidas</Nav.Link>
+              <Nav.Link as={Link} to="home">Under Armour</Nav.Link>
+              <Nav.Link as={Link} to="home">Puma</Nav.Link>
+            </Nav>
 
-          <span style={{ cursor: "pointer" }} onClick={() => { navigate("/signup") }}>
-            SignIn
-          </span>
+            {/* SEARCH */}
+            <div className="mobile-search">
+              <input type='text' placeholder='Search' className='searchbar'/>
+            </div>
 
+            {/* AUTH */}
+            <span>
+              <a href="#" onClick={logout}>Logout</a>
+            </span>
 
+            <span
+              style={{ cursor: "pointer" }}
+              onClick={() => navigate("/signup")}
+            >
+              SignIn
+            </span>
 
-         <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"20px"}}>
+            {/* ICONS */}
+            {/* <div className="nav-icons"> */}
+            <div className="icon-wrapper">
 
-          <span className="itemcount">{cartLength}</span>
-          <FaShoppingCart
-            className="carticon"
-            onClick={() => { navigate("/cartdata") }}
-            style={{ cursor: "pointer",color:"black" }}
-          />
+              <span className="itemcount">{cartLength}</span>
 
-          <FaHeart className='favouriteicon'/>
+              <FaShoppingCart
+                className="carticon"
+                style={{color:"black"}}
+                onClick={() => navigate("/cartdata")}
+              />
 
-         </div>
+              <FaHeart className='favouriteicon'/>
+            </div>
 
-
-
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
@@ -125,5 +169,3 @@ const Header = () => {
 };
 
 export default Header;
-
-

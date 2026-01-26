@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   background: #fff;
     margin-top: 20px;
   border-top: 1px solid orangered;
@@ -93,4 +93,184 @@ transform: scale(1.1);
   background: orangered;
   color: #fff;
   font-size: 14px;
+} */
+
+
+
+
+/* =========================
+   PREMIUM FOOTER DESIGN
+========================= */
+
+.footer {
+  background: linear-gradient(180deg, #fff 0%, #fff7f2 100%);
+  margin-top: 60px;
+  border-top: 2px solid orangered;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative glow line */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, orangered, transparent);
+  transform: translateX(-50%);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 20px 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+/* Brand */
+.footer-brand h2 {
+  color: orangered;
+  font-size: 30px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.footer-brand p {
+  color: #555;
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orangered;
+  border-radius: 50%;
+  transition: all 0.35s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple glow */
+.footer-social a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: orangered;
+  transform: scale(0);
+  border-radius: 50%;
+  transition: 0.35s ease;
+  z-index: -1;
+}
+
+.footer-social a:hover::after {
+  transform: scale(1);
+}
+
+.footer-social a:hover {
+  color: #fff;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 69, 0, 0.45);
+}
+
+/* LINKS */
+.footer-links h4,
+.footer-images h4 {
+  margin-bottom: 18px;
+  color: #000;
+  font-size: 18px;
+  position: relative;
+}
+
+.footer-links h4::after,
+.footer-images h4::after {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: orangered;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+}
+
+.footer-links a {
+  display: block;
+  color: #555;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: orangered;
+  transform: translateX(8px);
+}
+
+/* PAYMENT ICONS */
+.payment-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.payment-icons img {
+  width: 65px;
+  background: #fff;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.payment-icons img:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  text-align: center;
+  padding: 16px;
+  background: orangered;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links h4::after,
+  .footer-images h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-social,
+  .payment-icons {
+    justify-content: center;
+  }
 }
