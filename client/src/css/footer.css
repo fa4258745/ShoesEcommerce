@@ -1,0 +1,96 @@
+.footer {
+  background: #fff;
+    margin-top: 20px;
+  border-top: 1px solid orangered;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand h2 {
+  color: orangered;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.footer-social {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orangered;
+  border-radius: 50%;
+  transition: 0.3s all ease-in;
+  text-decoration: none;
+  
+}
+
+.footer-social a:hover {
+  transition: 0.3s all ease-in;
+  background: orangered;
+  color: #fff; 
+transform: scale(1.1);
+}
+
+.footer-links h4,
+.footer-images h4 {
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.footer-links a {
+  display: block;
+  color: #444;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+
+}
+
+.footer-links a:hover {
+  color: orangered;
+  transform: translateX(5px);
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+
+}
+
+.payment-icons img {
+  width: 60px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background: orangered;
+  color: #fff;
+  font-size: 14px;
+}

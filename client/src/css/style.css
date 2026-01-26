@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your existing CSS */
+#copyright {
+  width: 100%;
+  height: 100px;
+  background-color: lightblue;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+  color: navy;
+}
+
+.carticon {
+  color: white;
+  font-size: 20px;
+}
+
+.itemcount {
+  color: white;
+  font-weight: bold;
+}

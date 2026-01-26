@@ -1,0 +1,145 @@
+/* =========================
+   SHOES E-COMMERCE NAVBAR
+========================= */
+
+.navbar {
+  background: white;
+  padding: 14px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgb(67, 66, 66);
+  padding: 10px;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.navbar-brand::after {
+  content: " SHOES";
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+  color: #000;
+  font-weight: 500;
+  margin-right: 18px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #38bdf8 !important;
+}
+
+/* Hover underline */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.searchbar{
+  background: none;
+  border-radius: 20px;
+  padding: 5px 20px;
+  border: 1px solid #d2570b;
+  color: #000;
+  
+}
+.searchbar:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.6);
+}
+
+/* Right side text */
+.navbar span {
+    color: #000;
+
+  font-size: 14px;
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Logout link */
+.navbar span a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar span a:hover {
+  text-decoration: underline;
+}
+
+/* Sign In */
+.navbar span[style] {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+.navbar span[style]:hover {
+  text-decoration: underline;
+}
+
+
+.favouriteicon {
+      font-size: 22px;
+      transition: transform 0.3s ease, color 0.3s ease;
+
+}
+.favouriteicon:hover {
+   transform: scale(1.15);
+  color: red;
+}
+
+/* Cart Icon */
+.carticon {
+  font-size: 22px;
+  margin-left: 0px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.carticon:hover {
+  transform: scale(1.15);
+  color:orangered;
+}
+
+/* Cart Badge */
+.itemcount {
+  /* background-color: #ef4444; */
+  color: #000;
+  border: 2px solid #000;
+
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0.8px 6px;
+  position: relative;
+  top: -15px;
+  right: -36px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar span {
+    margin-top: 10px;
+  }
+}

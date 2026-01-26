@@ -1,0 +1,84 @@
+/* nike puma adidas box */
+.main-divshoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  color: #fff;
+}
+.nikeshoe {
+  background-color: #ecd909;
+background: linear-gradient(#ecd909,rgb(194, 181, 2));
+  height: 400px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s all ease-in;
+
+}
+.nikeshoe:hover {
+  transform: scale(1.1);
+  transition: 0.3s all ease-in;
+}
+.nikeshoe .logo {
+    width: 50px;
+
+}
+
+.adidasshoe {
+  border-radius: 10px;
+  background-color: #f90034;
+  height: 400px;
+  width: 250px;
+  transition: 0.3s all ease-in;
+
+}
+.adidasshoe:hover {
+  transform: scale(1.1);  transition: 0.3s all ease-in;
+
+}
+.adidasshoe .logo {
+  width: 50px;
+}
+.pumashoe {
+  border-radius: 10px;
+  background-color: #b2e75e;
+  height: 400px;
+    width: 250px;  transition: 0.3s all ease-in;
+
+
+}
+.pumashoe:hover {
+  transform: scale(1.1);  transition: 0.3s all ease-in;
+
+}
+.pumashoe .logo{
+  width: 50px;
+
+}
+.reebokshoe {
+  border-radius: 10px;
+  background-color: #151819;
+  background: linear-gradient(white,#151819); 
+  height: 400px;
+    width: 250px;  transition: 0.3s all ease-in;
+
+
+}
+.reebokshoe:hover {
+  transform: scale(1.1);  transition: 0.3s all ease-in;
+
+}
+.reebokshoe .logo{
+    width: 50px;
+
+}
+
+
+
+
+
+.familyh2 {
+  font-family: "anton";
+}

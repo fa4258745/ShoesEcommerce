@@ -1,0 +1,105 @@
+/* Root */
+.admin-wrapper {
+  min-height: 100vh;
+  background: #e0e5ec;
+  color: #333;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+.admin-header {
+  height: 70px;
+  background: #e0e5ec;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-radius: 0 0 20px 20px;
+
+  box-shadow:
+    8px 8px 16px #b8bcc2,
+   -8px -8px 16px #ffffff;
+}
+
+.admin-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.admin-user span {
+  color: #6a00ff;
+  font-weight: 600;
+}
+
+/* Layout */
+.admin-layout {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 240px;
+  padding: 25px 20px;
+  border-radius: 20px;
+  background: #e0e5ec;
+
+  box-shadow:
+    8px 8px 16px #b8bcc2,
+   -8px -8px 16px #ffffff;
+}
+
+.brand {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #6a00ff;
+}
+
+/* Menu Links */
+.menu-link {
+  display: block;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #555;
+  border-radius: 12px;
+  font-weight: 500;
+
+  box-shadow:
+    inset 3px 3px 6px #b8bcc2,
+    inset -3px -3px 6px #ffffff;
+
+  transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+  color: #6a00ff;
+  box-shadow:
+    6px 6px 12px #b8bcc2,
+   -6px -6px 12px #ffffff;
+}
+
+/* Active Menu */
+.menu-link.active {
+  color: #6a00ff;
+  font-weight: 600;
+
+  box-shadow:
+    inset 6px 6px 12px #b8bcc2,
+    inset -6px -6px 12px #ffffff;
+}
+
+/* Content */
+.admin-content {
+  flex: 1;
+  padding: 30px;
+  border-radius: 20px;
+  background: #e0e5ec;
+
+  box-shadow:
+    inset 8px 8px 16px #b8bcc2,
+    inset -8px -8px 16px #ffffff;
+}

@@ -1,0 +1,105 @@
+// @use "sass:color";
+
+// $color: #e4e1cf;
+
+
+
+
+// .button {
+//   display: inline-block;
+//   padding: 0.75rem 1.25rem;
+//   border-radius: 10rem;
+//   color: #000  !important;
+//   text-transform: uppercase;
+//   font-size: 1rem;
+//   letter-spacing: 0.15rem;
+//   transition: all 0.3s;
+//   position: relative;
+//   border-radius: 10rem !important;
+//   overflow: hidden;
+//   z-index: 1;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     background-color: $color;
+//     border-radius: 10rem;
+//     z-index: -2;
+//   }
+  
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     border-radius: 10rem;
+//     width: 0%;
+//     background-color: color.adjust($color, $lightness: -15%);
+//     transition: all 0.3s;
+//     border-radius: 10rem;
+//     z-index: -1;
+//   }
+
+//   &:hover::before {
+//     width: 100%;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+@use "sass:color";
+
+$hoverColor: orangered;
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem !important;
+  color: #000 !important;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: 1px solid orangered !important;
+  letter-spacing: 0.15rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+
+  // WHITE background (initial)
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #fff;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+
+  // ORANGERED background (hover)
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    background-color: $hoverColor;
+    transition: width 0.3s ease;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #fff !important;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+
