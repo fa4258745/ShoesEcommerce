@@ -160,15 +160,7 @@ const ContainerDiv = () => {
       </div>
 
 
-
-
-
-
-
-
-
     <div className="ad-container">
-
       <div className="ad-card">
         <video src={AdvidAdidas2} autoPlay loop muted playsInline />
       </div>
