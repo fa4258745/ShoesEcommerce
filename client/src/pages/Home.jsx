@@ -15,7 +15,7 @@ import GallerySwiper from "./GallerySwiper";
 import "../css/homeData.css";
 import heroimg from "../images/banner/hero-section-img.png";
 import Advertisement from "./Advertisement.jsx";
-import ContainerDiv from "./ContainerDiv.jsx";
+import ContainerDiv from "../component/ContainerDiv";
 import GAllerySwiper2 from "./GallerySwiper2.jsx"
 import Adidaslogo from "../images/Logo/New folder/adidas.png";
 import Nikelogo from "../images/Logo/New folder/nike.png";
@@ -476,8 +476,7 @@ useEffect(() => {
         </button>
       </div>
 
-      <ContainerDiv />
-
+     <ContainerDiv />
 
       <GallerySwiper />
 
