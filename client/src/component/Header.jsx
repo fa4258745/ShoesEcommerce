@@ -110,9 +110,10 @@ const Header = () => {
         <Container>
 
           {/* LOGO */}
-          <Navbar.Brand href="#home">
-            <img src={Logo} width="60px" />
+          <Navbar.Brand>
+            <img src={Logo} width="60px"  as={Link} to="home"/>
           </Navbar.Brand>
+
 
           {/* HAMBURGER */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -121,13 +122,56 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
 
             {/* NAV LINKS */}
-            <Nav className="me-auto">
+            {/* <Nav className="me-auto">
               <Nav.Link as={Link} to="home">Nike</Nav.Link>
               <Nav.Link as={Link} to="home">Reebok</Nav.Link>
               <Nav.Link as={Link} to="home">Adidas</Nav.Link>
               <Nav.Link as={Link} to="home">Under Armour</Nav.Link>
               <Nav.Link as={Link} to="home">Puma</Nav.Link>
-            </Nav>
+            </Nav> */}
+
+            <Nav className="me-auto"> 
+
+<Nav.Link
+  onClick={() =>
+    navigate("/home", { state: { brand: "Nike" } })
+  }
+>
+  Nike
+</Nav.Link>
+
+<Nav.Link
+  onClick={() =>
+    navigate("/home", { state: { brand: "Adidas" } })
+  }
+>
+  Adidas
+</Nav.Link>
+
+<Nav.Link
+  onClick={() =>
+    navigate("/home", { state: { brand: "Reebok" } })
+  }
+>
+  Reebok
+</Nav.Link>
+
+<Nav.Link
+  onClick={() =>
+    navigate("/home", { state: { brand: "Puma" } })
+  }
+>
+  Puma
+</Nav.Link>
+
+            </Nav> 
+
+
+
+
+
+
+
 
             {/* SEARCH */}
             <div className="mobile-search">
@@ -169,3 +213,11 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
+
+

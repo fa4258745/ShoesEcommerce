@@ -89,12 +89,32 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    let api = `${BackEndUrl}/user/login`;
-    const response = await axios.post(api, { email, password });
-    localStorage.setItem("token", response.data.accessToken);
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   let api = `${BackEndUrl}/user/login`;
+  //   const response = await axios.post(api, { email, password });
+  //   localStorage.setItem("token", response.data.accessToken);
+  // };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const api = `${BackEndUrl}/admin/adminlogin`;
+
+    const response = await axios.post(api, {
+      adminid: email,   // 👈 email field ko adminid bana diya
+      password,
+    });
+
+    localStorage.setItem("admin", JSON.stringify(response.data));
+    navigate("/home");
+
+  } catch (err) {
+    alert(err.response?.data?.msg || "Login failed");
+  }
+};
+
+
 
   return (
     <Box

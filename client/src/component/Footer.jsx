@@ -12,13 +12,55 @@ const Footer = () => {
           <p>Premium shoes for comfort, performance & style.</p>
 
           <div className="footer-social">
-          <div className="footer-social">
+          {/* <div className="footer-social">
   <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
   <a href="#"><i className="fa-brands fa-instagram"></i></a>
   <a href="#"><i className="fa-brands fa-twitter"></i></a>
   <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
   <a href="#"><i className="fa-brands fa-whatsapp"></i></a>
+</div> */}
+<div className="footer-social">
+  <a
+    href="https://www.facebook.com/yourusername"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <i className="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a
+    href="https://www.instagram.com/yourusername"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <i className="fa-brands fa-instagram"></i>
+  </a>
+
+  <a
+    href="https://twitter.com/yourusername"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <i className="fa-brands fa-twitter"></i>
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/yourusername"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <i className="fa-brands fa-linkedin-in"></i>
+  </a>
+
+  <a
+    href="https://wa.me/919977667222"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <i className="fa-brands fa-whatsapp"></i>
+  </a>
 </div>
+
 
           </div>
         </div>

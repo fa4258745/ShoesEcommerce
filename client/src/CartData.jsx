@@ -127,7 +127,7 @@ const CartData = () => {
               ₹{item.price * item.qnty}
               <button
                 className="remove-btn"
-                onClick={() => dispatch(itemRemove({ id: item.id }))}
+                onClick={() => dispatch(itemRemove({ id: item.id,size: item.size }))}
               >
                 Remove
               </button>

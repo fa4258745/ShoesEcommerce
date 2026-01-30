@@ -1,4 +1,8 @@
+
 import "./button.scss";
+
+import { useLocation } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 import BackEndUrl from "../config/BackEndUrl";
 import axios from "axios";
@@ -12,7 +16,7 @@ import "../css/homeData.css";
 import heroimg from "../images/banner/hero-section-img.png";
 import Advertisement from "./Advertisement.jsx";
 import ContainerDiv from "./ContainerDiv.jsx";
-
+import GAllerySwiper2 from "./GallerySwiper2.jsx"
 import Adidaslogo from "../images/Logo/New folder/adidas.png";
 import Nikelogo from "../images/Logo/New folder/nike.png";
 import Pumalogo from "../images/Logo/New folder/puma.png";
@@ -25,7 +29,39 @@ import aboutImg from "../images/Nike Sports Shoe Ad Design __ Behance/aboutus.we
 
 import orangeShoe from "../images/banner/orange-shoe.jpg";
 
+import NewBalanceLogo from "../images/Logo/New folder/newBalanceLogo.png"
+import NewBalanceShoes from "../images/Logo/New folder/New Balance Fresh Foam X More v3 Trail Running Shoes - SS24-Photoroom.png"
+
+import BalmainLogo from "../images/Logo/New folder/BalmainShoes.png"
+import BalmainShoes from "../images/Logo/New folder/Balmain unicorn shoes (1)-Photoroom.png"
+
+import SketchersLogo from "../images/Logo/New folder/sketchersLogo.png"
+import SketchersShoes from "../images/Logo/New folder/SketcherSHoes.png"
+
+import UnderArmourLogo from "../images/Logo/New folder/UA Echo SlipSpeed™ Unisex Shoes _ Under Armour UK-Photoroom.png"
+import UnderArmourShoes from "../images/Logo/New folder/underarmour-Photoroom.png"
+
+
+
+
+
 const Home = () => {
+
+
+
+
+  
+ 
+const location = useLocation();
+
+useEffect(() => {
+  if (location.state?.brand) {
+    setCategory(location.state.brand);
+  }
+}, [location.state]);
+
+
+
   const [products, setProducts] = useState([]);
   const [selectedSize, setSelectedSize] = useState({});
   const dispatch = useDispatch();
@@ -63,6 +99,11 @@ const Home = () => {
             item.category.toLowerCase() === category.toLowerCase(),
         );
 
+
+
+
+
+
   // 🔹 PAGINATION
   const lastIndex = currentPage * productsPerPage;
   const firstIndex = lastIndex - productsPerPage;
@@ -98,7 +139,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="logoContainers">
+      {/* <div className="logoContainers">
         <div className="logoTrack">
           <img src={Nikelogo} width="100" />
           <img src={NikeShoes} width="100" />
@@ -111,9 +152,149 @@ const Home = () => {
           <img src={Pumalogo} width="100" />
           <img src={PumaShoes} width="100" />
 
-          {/* duplicate for seamless loop */}
+        
         </div>
-      </div>
+      </div> */}
+
+
+
+      {/* <div className="logoContainers">
+  <div className="logoTrack">
+    <div className="brandItem">
+      <img src={Nikelogo} alt="Nike" />
+      <img src={NikeShoes} alt="Nike Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Adidaslogo} alt="Adidas" />
+      <img src={AdidasShoes} alt="Adidas Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Reeboklogo} alt="Reebok" />
+      <img src={ReebokShoes} alt="Reebok Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Pumalogo} alt="Puma" />
+      <img src={PumaShoes} alt="Puma Shoes" />
+    </div>
+
+ 
+
+    <div className="brandItem">
+      <img src={SketchersLogo} alt="Puma" />
+      <img src={SketchersShoes} alt="Puma Shoes" />
+    </div>
+    <div className="brandItem">
+      <img src={BalmainLogo} alt="Puma" />
+      <img src={BalmainShoes} alt="Puma Shoes" />
+    </div>
+    <div className="brandItem">
+      <img src={UnderArmourLogo} alt="Puma" />
+      <img src={UnderArmourShoes} alt="Puma Shoes" />
+    </div>
+    <div className="brandItem">
+      <img src={NewBalanceLogo} alt="Puma" />
+      <img src={NewBalanceShoes} alt="Puma Shoes" />
+    </div>
+
+
+
+
+
+  </div>
+</div> */}
+
+
+<div className="logoContainers">
+  <div className="logoTrack">
+
+    {/* ORIGINAL */}
+    <div className="brandItem">
+      <img src={Nikelogo} alt="Nike" />
+      <img src={NikeShoes} alt="Nike Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Adidaslogo} alt="Adidas" />
+      <img src={AdidasShoes} alt="Adidas Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Reeboklogo} alt="Reebok" />
+      <img src={ReebokShoes} alt="Reebok Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Pumalogo} alt="Puma" />
+      <img src={PumaShoes} alt="Puma Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={SketchersLogo} alt="Sketchers" />
+      <img src={SketchersShoes} alt="Sketchers Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={BalmainLogo} alt="Balmain" />
+      <img src={BalmainShoes} alt="Balmain Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={UnderArmourLogo} alt="Under Armour" />
+      <img src={UnderArmourShoes} alt="Under Armour Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={NewBalanceLogo} alt="New Balance" />
+      <img src={NewBalanceShoes} alt="New Balance Shoes" />
+    </div>
+
+    {/* 🔁 DUPLICATE (IMPORTANT PART) */}
+    <div className="brandItem">
+      <img src={Nikelogo} alt="Nike" />
+      <img src={NikeShoes} alt="Nike Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Adidaslogo} alt="Adidas" />
+      <img src={AdidasShoes} alt="Adidas Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Reeboklogo} alt="Reebok" />
+      <img src={ReebokShoes} alt="Reebok Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={Pumalogo} alt="Puma" />
+      <img src={PumaShoes} alt="Puma Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={SketchersLogo} alt="Sketchers" />
+      <img src={SketchersShoes} alt="Sketchers Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={BalmainLogo} alt="Balmain" />
+      <img src={BalmainShoes} alt="Balmain Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={UnderArmourLogo} alt="Under Armour" />
+      <img src={UnderArmourShoes} alt="Under Armour Shoes" />
+    </div>
+
+    <div className="brandItem">
+      <img src={NewBalanceLogo} alt="New Balance" />
+      <img src={NewBalanceShoes} alt="New Balance Shoes" />
+    </div>
+
+  </div>
+</div>
+
 
       {/* <>*******   SECTION 3     *******</> */}
 
@@ -301,6 +482,8 @@ const Home = () => {
       <GallerySwiper />
 
       <Advertisement />
+
+      <GAllerySwiper2/>
       <div className="aboutcontainer">
         <img src={aboutImg} width="50%" />
         <div className="aboutInfo">

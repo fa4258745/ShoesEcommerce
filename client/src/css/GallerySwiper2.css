@@ -1,0 +1,22 @@
+.swiper-lg-wrap2 {
+  width: 100%;
+  max-width: 100%;
+  height: 200px; /* adjust as needed */
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: "10px";
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative !important;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
