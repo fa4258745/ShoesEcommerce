@@ -12,6 +12,7 @@
   src: url("../font//Anton//Anton-Regular.ttf");
 }
 
+
 .hero-section {
   height: 100%;
   display: flex;
@@ -547,7 +548,6 @@ flex-direction: column;
 
 
 
-
 /* =========================
    RESPONSIVE GOOGLE MAP
 ========================= */
@@ -569,4 +569,11 @@ flex-direction: column;
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+
+@media screen and (max-width: 450px) {
+  .orange {
+     font-size: 9.2rem !important;
+  }
 }
